@@ -1,2 +1,4 @@
-.DS_Store
-.csv
+*.DS_Store
+*.csv
+*.tar.gz
+cifar-10-batches-py/
