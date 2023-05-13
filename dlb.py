@@ -38,7 +38,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--model_names", type=str, default="vgg16")
 
 
-parser.add_argument("--root", type=str, default="../data/")
+parser.add_argument("--root", type=str, default="./data/")
 parser.add_argument("--num_workers", type=int, default=16)
 parser.add_argument("--classes_num", type=int, default=100)
 parser.add_argument(
@@ -442,8 +442,6 @@ if __name__ == "__main__":
         # loss=losses.TripletMarginLoss(margin=0.2), embedding_size=100, memory_size=1024, miner=mining_func)
         # loss=losses.TripletMarginLoss(margin=0.2), embedding_size=100, memory_size=1024)
         loss=losses.TripletMarginLoss(margin=0.2), embedding_size=100, memory_size=256)
-
-
 
     scheduler = MultiStepLR(optimizer, args.milestones, args.gamma)
 

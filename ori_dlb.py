@@ -41,6 +41,8 @@ parser.add_argument("--epsilon", default=0.03, type=float,
 
 # parser.add_argument("--classes_num", type=int, default=100)
 
+parser.add_argument("--T", type=float)
+parser.add_argument("--alpha", type=float)
 parser.add_argument("--batch_size", type=int, default=64)
 parser.add_argument("--epoch", type=int, default=240)
 parser.add_argument("--lr", type=float, default=0.05)
@@ -58,8 +60,6 @@ parser.add_argument("--aug_nums", type=int, default=2)
 parser.add_argument("--exp_postfix", type=str, default="base")
 
 
-parser.add_argument("--T", type=float)
-parser.add_argument("--alpha", type=float)
 
 args = parser.parse_args()
 args.num_branch = len(args.model_names)
